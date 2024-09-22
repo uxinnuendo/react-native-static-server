@@ -105,12 +105,6 @@ def configureReactNativePom(def pom) {
     }
 }
 
-subprojects { subproject ->
-    if (project['name'] == 'react-native-static-server') {
-        project.configurations { compile { } }
-    }
-}
-
 afterEvaluate { project ->
     // some Gradle build hooks ref:
     // https://www.oreilly.com/library/view/gradle-beyond-the/9781449373801/ch03.html
